@@ -9,8 +9,13 @@ app.get("*",(req,res)=>{
 
 })
 
-  app.listen(port,function(){
-    console.log('The server is running, ' + ' please open your browser at http://localhost:%s',port);
-    })
+const port = process.env.PORT || 8080
 
-    module.exports = app;
+app.listen(port, (err, res) => {
+    if (err) {
+        console.log(err)
+        return res.status(500).send(err.message)
+    } else {
+        console.log('[INFO] Server Running on port:', port)
+    }
+})
