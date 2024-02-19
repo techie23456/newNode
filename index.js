@@ -19,3 +19,5 @@ app.listen(port, (err, res) => {
         console.log('[INFO] Server Running on port:', port)
     }
 })
+
+module.exports = app
