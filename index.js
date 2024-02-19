@@ -12,3 +12,5 @@ app.get("*",(req,res)=>{
   app.listen(port,function(){
     console.log('The server is running, ' + ' please open your browser at http://localhost:%s',port);
     })
+
+    module.exports = app;
